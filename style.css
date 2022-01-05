@@ -1,0 +1,156 @@
+/*==================
+    Start Global Rules
+==================*/
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Light-Gray);
+    padding: 30px 0;
+}
+::selection {
+    background-color: #ddd;
+    color: var(--cyan);
+}
+/*==================
+    End Global Rules
+==================*/
+
+/*==================
+    Start Card
+==================*/
+.card {
+    width: 600px;
+    background-color: white;
+    box-shadow: 0 0 20px rgb(200, 200, 200);
+    border-radius: 8px;
+}
+
+/* Text Row */
+.card .row.one {
+    padding: 35px;
+}
+
+.card .row.one h1 {
+    color: var(--cyan);
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.card .row.one h3 {
+    color: var(--Bright-Yellow);
+    margin-bottom: 15px;
+}
+
+.card .row.one p {
+    color: var(--Grayish-Blue);
+    line-height: 1.6;
+}
+
+/* Row Two */
+.card .row.two {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.card .row.two .column {
+    padding: 35px;
+    color: white;
+}
+
+.card .row.two .column h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+/* Colun One */
+.card .row.two .column.one {
+    background-color: var(--cyan);
+    border-bottom-left-radius: 8px;
+}
+
+.card .row.two .column.one .price {
+    color: var(--Light-Gray);
+    margin-bottom: 7px;
+}
+
+.card .row.two .column.one .price span {
+    color: white;
+    font-size: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.card .row.two .column.one p:not(.price) {
+    color: var(--Light-Gray);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.card .row.two .column.one a {
+    color: white;
+    text-decoration: none;
+    background-color: var(--Bright-Yellow);
+    display: block;
+    padding: 12px 0;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.25s;
+}
+.card .row.two .column.one a:hover {
+    background-color: hsl(71, 55%, 47%);
+}
+/* Column Two */
+.card .row.two .column.two {
+    background-color: hsl(179.5, 47.2%, 51.8%);
+    border-bottom-right-radius: 8px;
+}
+
+.card .row.two .column.two ul {
+    list-style: none;
+}
+
+.card .row.two .column.two ul li {
+    color: var(--Light-Gray);
+    line-height: 1.3;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .card .row.two {
+        display: block;
+    }
+
+    .card .row.two .column.one {
+        border-radius: 0;
+    }
+
+    .card .row.two .column.two {
+        border-bottom-left-radius: 8px;
+    }
+}
+
+/*==================
+    End Card
+==================*/
